@@ -1,0 +1,194 @@
+BÀI THỰC HÀNH 7: XÂY DỰNG KẾ HOẠCH TỔ CHỨC SỰ KIỆN AI INNOVATION DAY
+===========================================================================
+ 
+Thông tin ban đầu (giữ nguyên, không thay đổi):
+- Quy mô: 150 sinh viên
+- Thời gian: 1 ngày
+- Ngân sách tối đa: 15.000.000 đồng
+- Nhân sự tổ chức: 10 người
+- Mục tiêu: Giúp sinh viên hiểu và trải nghiệm ứng dụng AI trong học tập và
+  công việc
+ 
+ 
+1. BỘ PROMPT (KẾT HỢP 3 KỸ THUẬT)
+---------------------------------------------------------------------------
+ 
+Prompt Chaining: 6 prompt nối nhau, kết quả bước trước làm đầu vào bước sau.
+Chain-of-Thought (CoT): dùng ở P1, P3 và P6, yêu cầu AI suy luận từng bước.
+Context Management: P7 tạo bản tóm tắt ngữ cảnh, P8 dùng để mở hội thoại mới.
+ 
+Sơ đồ:
+P1 Khả thi (CoT) -> P2 Lịch trình -> P3 Ngân sách (CoT) -> P4 Phân công
+-> P5 Truyền thông -> P6 Kiểm tra và hiệu chỉnh (CoT)
+-> P7 Tóm tắt ngữ cảnh -> P8 Mở hội thoại mới
+ 
+PROMPT 1 - Phân tích tính khả thi (CoT):
+"Bạn là chuyên gia tổ chức sự kiện. CLB công nghệ tổ chức AI Innovation Day
+cho 150 sinh viên, 1 ngày, ngân sách tối đa 15.000.000đ, 10 nhân sự, mục tiêu
+giúp sinh viên hiểu và trải nghiệm AI trong học tập và công việc. Hãy suy
+luận từng bước: (1) đánh giá quy mô, (2) đánh giá ngân sách, (3) đánh giá
+nhân sự, (4) rủi ro, rồi kết luận có khả thi không. Không thay đổi 150 sinh
+viên, 10 nhân sự, 15 triệu."
+ 
+PROMPT 2 - Lịch trình:
+"Dựa trên bản phân tích khả thi ở trên, lập lịch trình sự kiện 1 ngày theo
+khung giờ, có workshop trải nghiệm AI, có giờ nghỉ."
+ 
+PROMPT 3 - Ngân sách (CoT):
+"Dựa trên lịch trình ở trên, lập bảng dự toán ngân sách. Hãy tính từng bước
+(đơn giá x số lượng), cộng tổng, kiểm tra tổng không vượt 15.000.000đ, có
+khoản dự phòng."
+ 
+PROMPT 4 - Phân công:
+"Dựa trên lịch trình và ngân sách ở trên, phân công đúng 10 nhân sự, mỗi
+người một nhiệm vụ rõ ràng."
+ 
+PROMPT 5 - Truyền thông:
+"Dựa trên các kết quả trên, lập kế hoạch truyền thông trước sự kiện, mục
+tiêu đủ 150 sinh viên đăng ký, không vượt ngân sách truyền thông."
+ 
+PROMPT 6 - Kiểm tra và hiệu chỉnh (CoT):
+"Hãy kiểm tra toàn bộ kế hoạch từng bước: ngân sách có vượt không, lịch trình
+có khớp nhân sự không, truyền thông có khớp quy mô 150 người không, rủi ro
+còn lại. Nêu vấn đề và sửa lại."
+ 
+PROMPT 7 - Tóm tắt ngữ cảnh:
+"Hãy tóm tắt toàn bộ dự án (thông tin gốc, các quyết định đã chốt, kết quả
+từng bước, vấn đề còn lại) thành bản ngắn gọn để tôi dán sang hội thoại mới."
+ 
+PROMPT 8 - Hội thoại mới:
+"Đây là bản tóm tắt ngữ cảnh dự án: [dán bản tóm tắt]. Hãy tiếp tục hoàn
+thiện kế hoạch dựa trên bản này, giữ nguyên các ràng buộc."
+ 
+ 
+2. BẢN PHÂN TÍCH TÍNH KHẢ THI (kết quả P1)
+---------------------------------------------------------------------------
+ 
+- Quy mô: 150 sinh viên trong 1 ngày, dùng 1 hội trường lớn là phù hợp.
+- Ngân sách: 15.000.000đ / 150 người = 100.000đ/người, đủ cho nước/bánh nhẹ,
+  tài liệu và quà nhỏ. Vì vậy chọn hình thức mời diễn giả hỗ trợ chi phí
+  thấp.
+- Nhân sự: 10 người cho 150 sinh viên (khoảng 1 người/15 sinh viên) là đủ.
+- Rủi ro: Sinh viên đăng ký nhưng không đến, mạng yếu khi workshop, diễn giả
+  hủy.
+- Kết luận: KHẢ THI, với điều kiện chi tiêu đúng dự toán và có phương án dự
+  phòng.
+ 
+ 
+3. LỊCH TRÌNH SỰ KIỆN
+---------------------------------------------------------------------------
+ 
+07:30 - 08:30 | Đón tiếp, check-in
+08:30 - 08:45 | Khai mạc
+08:45 - 09:45 | Talk 1: AI trong học tập
+09:45 - 10:00 | Giải lao (teabreak 1)
+10:00 - 11:15 | Workshop 1: Dùng AI viết prompt để học và tóm tắt tài liệu
+11:15 - 12:00 | Mini game "Đoán sản phẩm AI"
+12:00 - 13:30 | Nghỉ trưa (sinh viên tự túc)
+13:30 - 14:30 | Talk 2: AI trong công việc
+14:30 - 14:45 | Giải lao (teabreak 2)
+14:45 - 16:00 | Workshop 2: Dùng AI làm CV, slide, hỗ trợ công việc
+16:00 - 16:30 | Trưng bày, demo sản phẩm của sinh viên
+16:30 - 17:00 | Trao quà, khảo sát, bế mạc
+ 
+ 
+4. BẢNG DỰ TOÁN NGÂN SÁCH
+---------------------------------------------------------------------------
+ 
+STT | Hạng mục                                | Cách tính      | Thành tiền (đ)
+----|-----------------------------------------|----------------|---------------
+ 1  | Hội trường, âm thanh, máy chiếu         | trọn gói       |      3.000.000
+ 2  | Hỗ trợ 2 diễn giả                       | 2 x 1.250.000  |      2.500.000
+ 3  | Teabreak 2 đợt                          | 150 x 30.000   |      4.500.000
+ 4  | In ấn (banner, thẻ tên, tài liệu)       | trọn gói       |      1.500.000
+ 5  | Quà, giải thưởng mini game              | trọn gói       |      1.500.000
+ 6  | Truyền thông (quảng cáo, thiết kế)      | trọn gói       |        500.000
+ 7  | Áo cho ban tổ chức                      | 10 x 80.000    |        800.000
+ 8  | Dự phòng                                |                |        500.000
+----|-----------------------------------------|----------------|---------------
+    | TỔNG                                    |                |     14.800.000
+ 
+Tổng 14.800.000đ nhỏ hơn 15.000.000đ nên không vượt ngân sách.
+ 
+ 
+5. BẢNG PHÂN CÔNG 10 NHÂN SỰ
+---------------------------------------------------------------------------
+ 
+STT | Vị trí                 | Số người | Nhiệm vụ
+----|------------------------|----------|-----------------------------------
+ 1  | Trưởng ban tổ chức     |    1     | Điều hành chung, làm việc với nhà
+    |                        |          | trường
+ 2  | Điều phối chương trình |    1     | Bám lịch trình, làm MC, xử lý sự cố
+ 3  | Nội dung và diễn giả   |    2     | Liên hệ diễn giả, chuẩn bị workshop,
+    |                        |          | mini game
+ 4  | Truyền thông           |    2     | Làm poster, đăng bài, quản lý form
+    |                        |          | đăng ký
+ 5  | Hậu cần và tài chính   |    2     | Hội trường, teabreak, quà, thu chi
+ 6  | Đón tiếp               |    2     | Check-in, hướng dẫn chỗ ngồi, hỗ trợ
+    |                        |          | sinh viên
+----|------------------------|----------|-----------------------------------
+    | TỔNG                   |   10     |
+ 
+ 
+6. KẾ HOẠCH TRUYỀN THÔNG TRƯỚC SỰ KIỆN
+---------------------------------------------------------------------------
+ 
+T-14 ngày | Công bố sự kiện, đăng poster, mở form đăng ký 150 suất
+          | Kênh: Fanpage CLB, group sinh viên
+T-10 ngày | Giới thiệu diễn giả và nội dung workshop
+          | Kênh: Facebook
+T-7 ngày  | Video ngắn giới thiệu "AI giúp gì cho sinh viên"
+          | Kênh: TikTok, Facebook
+T-3 ngày  | Thông báo gần đủ suất, nhắc đăng ký
+          | Kênh: Facebook, group lớp
+T-1 ngày  | Gửi email nhắc lịch, địa điểm, giờ check-in
+          | Kênh: Email, Zalo
+ 
+Ghi chú: Mở đăng ký khoảng 170 suất để bù cho người không đến, nhưng quy mô
+tổ chức vẫn là 150 sinh viên.
+ 
+ 
+7. BẢN TÓM TẮT NGỮ CẢNH DỰ ÁN (dùng cho hội thoại mới)
+---------------------------------------------------------------------------
+ 
+DỰ ÁN: AI Innovation Day
+- Quy mô 150 sinh viên, 1 ngày, 10 nhân sự, ngân sách tối đa 15.000.000đ
+  (không đổi).
+- Mục tiêu: giúp sinh viên hiểu và trải nghiệm AI trong học tập và công việc.
+ĐÃ CHỐT:
+- Khả thi (khoảng 100.000đ/người).
+- Lịch: 07:30-17:00, 2 talk, 2 workshop, 1 mini game, 2 teabreak, trưa tự túc.
+- Ngân sách: tổng 14.800.000đ, gồm dự phòng 500.000đ.
+- Nhân sự: 1 trưởng ban, 1 điều phối, 2 nội dung, 2 truyền thông, 2 hậu cần,
+  2 đón tiếp.
+- Truyền thông: 5 mốc từ T-14 đến T-1, mở khoảng 170 suất đăng ký.
+CÒN LẠI: Hoàn thiện sau bước kiểm tra, chuẩn bị phương án dự phòng.
+ 
+ 
+8. BÁO CÁO KIỂM TRA VÀ HIỆU CHỈNH (kết quả P6)
+---------------------------------------------------------------------------
+ 
+1) Ngân sách không vượt 15 triệu: ĐẠT (14.800.000đ)
+   Vấn đề: Dự phòng chỉ 500.000đ.
+   Hiệu chỉnh: Giữ nguyên, ưu tiên mời diễn giả giá thấp hoặc tài trợ.
+ 
+2) Quy mô 150 sinh viên: ĐẠT
+   Vấn đề: Có thể có người đăng ký nhưng không đến.
+   Hiệu chỉnh: Mở khoảng 170 suất đăng ký, quy mô tổ chức vẫn 150.
+ 
+3) Số nhân sự 10: ĐẠT
+   Vấn đề: Giờ check-in đông chỉ có 2 người đón tiếp.
+   Hiệu chỉnh: Nhân sự truyền thông hỗ trợ check-in buổi sáng.
+ 
+4) Lịch trình khớp ngân sách: ĐẠT
+   Teabreak 2 đợt khớp với mục 3 trong dự toán. Không cần sửa.
+ 
+5) Rủi ro mạng yếu khi workshop: CHƯA CÓ PHƯƠNG ÁN
+   Hiệu chỉnh: Báo trước sinh viên tự mang laptop, chuẩn bị 4G dự phòng.
+ 
+6) Rủi ro diễn giả hủy: CHƯA CÓ PHƯƠNG ÁN
+   Hiệu chỉnh: Chuẩn bị 1 diễn giả dự bị trong CLB.
+ 
+KẾT LUẬN: Sau hiệu chỉnh, kế hoạch thống nhất, không vượt ngân sách, giữ
+nguyên 150 sinh viên và 10 nhân sự.
+ 
